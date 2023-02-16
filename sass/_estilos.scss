@@ -1,0 +1,355 @@
+@use "componentes";
+$color-principal: #121F3C;
+
+
+@mixin section-display{
+    width: 100%;
+    max-width: 1100px;
+    margin-left: 5rem;
+   
+}
+
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+html, body{
+ background-color: $color-principal;
+ margin:0;
+ padding:0;
+
+ 
+}
+
+.nav{
+    width: 100%;
+   
+   .container-nav{
+        width: 1250px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.50rem;
+        border-bottom: 3px solid componentes.$azul-oscuro;
+        .header-search{
+            display: flex;
+
+            .configuraciones{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 200px;
+
+                .text-search{
+                    margin: 0;
+                    color: componentes.$color-blanco ;
+                }
+
+                .icon-list{
+                    color: componentes.$color-blanco;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .sec-interna{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       margin: 0 auto;
+        width: 700px;
+        border-bottom: 0.2px solid componentes.$color-gris;
+        padding: 0.50rem;
+       
+        
+        P{
+            margin: 0 10px;
+            a{
+                text-decoration: none;
+                color: componentes.$color-plomo;
+                &:focus{
+                    color: componentes.$azul-claro;
+                }
+            }
+        }
+    }
+}
+
+.sec-progreso{
+    @include section-display();
+    .intro{
+        .tittle-progreso{
+            margin: 1.5rem 0;
+            color: componentes.$color-blanco;
+        }
+        .subtittle-progreso{
+            color: componentes.$color-blanco;
+            font-size: 24px;
+        }
+        .sub-intro{
+            display: flex;
+            justify-content: space-between;
+             .text{
+                color: componentes.$color-blanco;
+                margin: 0;
+        
+            }
+            a{
+                text-decoration: none;
+                color: componentes.$azul-claro;
+            }
+        }
+        
+
+    }
+    
+    .container-progreso{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 275px);
+        
+    }
+    
+    
+}
+.sec-mis-cursos{
+    @include section-display();
+    .intro{
+        display: flex;
+        justify-content: space-between;
+        margin: 3rem 0 1rem 0;
+        h2{
+            color: componentes.$color-blanco;
+        }
+        a{
+            text-decoration: none;
+            color: componentes.$azul-claro;
+        }
+    }
+    .container-card{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 275px);
+    }
+}
+
+.sec-rutas{
+    @include section-display();
+    
+    h2{
+        color: componentes.$color-blanco; 
+        margin: 1rem 0;
+        i{
+            color: componentes.$color-icon-tittle;
+        }
+    }
+    .main-container-ruta{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 275px);
+        row-gap:1.4rem;
+       
+        
+        
+    }
+}
+
+.sec-retos{
+    @include section-display();
+    margin-top:7rem;
+    h2{
+        color: componentes.$color-blanco; 
+       
+       
+      
+    }
+}
+
+.sec-best-cursos{
+    @include section-display();
+    .intro-best-curso{
+        .tittle-best-curso{
+            color: componentes.$color-blanco; 
+            margin: 1rem 0;
+        }
+    }
+    .menu-best-curso{
+        display: flex;
+       border-bottom: 2px solid componentes.$color-gris;
+       margin-bottom: 1rem;
+      
+        
+        .text-menu-best-curso{
+             width: 180px;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 3px;
+            a{
+                color: componentes.$color-blanco; 
+                text-decoration: none;
+                font-weight: bold;
+              
+                
+                &:focus{
+                    text-decoration: underline 3px;
+                    color: componentes.$azul-claro;
+                   
+                }
+                
+            }
+
+        }
+    }
+    .cursos{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 275px);
+       
+    }
+}
+
+.sec-escuelas{
+    @include  section-display();
+    .intro-escuelas{
+        display: flex;
+        justify-content: space-between;
+        margin: 3rem 0 1rem 0 ;
+        
+        h2{
+            color: componentes.$color-blanco;
+            i{
+                color: componentes.$color-icon-tittle;
+            }
+          
+
+        }
+        a{
+            text-decoration: none;
+            color: componentes.$azul-claro;
+        }
+    }
+    .checked-escuelas{
+        color: componentes.$color-plomo;
+        margin-bottom: 1rem;
+        i{
+            margin-right: 5px;
+        }  
+        
+    }
+}
+
+.sec-footer{
+   background-color: componentes.$azul-oscuro;
+   .container-footer{
+    @include section-display();
+    margin-top: 1.5rem;
+   
+   .intro-footer{
+    display: flex;
+    justify-content: space-around;
+    color:componentes.$color-blanco;
+   
+  
+    .brand{
+        margin-top: 1rem;
+       
+        .logo-footer{
+            margin-bottom: 1rem;
+        }
+        p{
+            width: 400px;
+        }
+
+        .red-social{
+                     
+            width: 200px;
+           
+            a{
+                color: componentes.$color-blanco;
+                margin-right: 1rem;
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .footer-escuelas{
+        margin-top: 1.5rem;
+        ul{
+            li{
+                list-style-type:square;
+                line-height: 2rem;
+               
+                a{
+                    text-decoration: none;
+                    color:componentes.$color-blanco;
+                   
+                }
+            }
+        }
+
+    }
+
+    .certificaciones{
+       
+        margin-top: 1.5rem;
+    }
+   
+  }
+
+  .novedades{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem 0;
+    
+    label{
+        color: componentes.$color-blanco;
+       
+    }
+    input{
+        outline: none;
+        border:  1px solid componentes.$azul-claro;
+        background-color: componentes.$azul-oscuro;
+        border-radius: 0.50rem 0 0 0.50rem;
+        width: 350px;
+        padding: 0.50rem;
+        color: componentes.$color-blanco;
+        border-right: none;
+    }
+  }
+  .links{
+    display: flex;
+    width: 900px;
+    list-style: none;
+    margin-top: 3rem;
+    li{
+        a{
+            text-decoration: none;
+            color: componentes.$color-blanco;
+            font-size: 12px;
+            margin-right: 1rem;
+           
+        }
+    }
+   
+  }
+  .creador{
+    text-align: center;
+    color: componentes.$color-blanco;
+  }
+
+}
+}
+
+@media (max-width:640px){
+        .intro-footer{
+            flex-direction: column;
+            .brand{
+                p{
+                    width: 100%;
+               font-size: 12px;
+                
+                }
+            }
+        }
+    
+    
+}
